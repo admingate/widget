@@ -1,0 +1,25 @@
+{
+    "name": "admingate/widget",
+    "description": "Widget package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Admingate\\Widget\\": "src"
+        }
+    },
+    "require": {
+        "admingate/admingate": "*@dev",
+        "admingate/theme": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Admingate\\Widget\\Providers\\WidgetServiceProvider"
+            ],
+            "aliases": {
+                "Widget": "Admingate\\Widget\\Facades\\WidgetFacade",
+                "WidgetGroup": "Admingate\\Widget\\Facades\\WidgetGroupFacade"
+            }
+        }
+    }
+}
